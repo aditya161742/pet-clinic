@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Vets Page</title>
+
+<!-- Adding Bootstrap/Jquery using CDN -->
+<!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+<!-- Adding Bootsrap/Jquery using Webjars -->
+<!-- Note this webjars wokrs after adding bootstrap webjar from https://www.webjars.org/ --> 
+<link th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}"/>
+<script th:href="@{/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js}"></script>
+
+<!-- Note this jquery is curated from bootstrap webjar -->
+<script src="/webjars/jquery/1.11.1/jquery.min.js"></script>
+
+</head>
+<body>
+	<!-- Note here we have provide single quotes when using Text with more than one word -->
+	<h1 th:text="'List Of Vets'"></h1>
+	
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Firstname</th>
+				<th>Lastname</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="vets:${vets}">
+				<td th:text="${vetr.id}"></td>
+				<td th:text="${vet.firstname}"></td>
+				<td th:text="${vet.lastname}"></td>
+			</tr>
+		</tbody>
+	</table>
+	
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Pet Clinic Index</title>
+
+<!-- Adding Bootstrap/Jquery using CDN -->
+<!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+<!-- Adding Bootsrap/Jquery using Webjars -->
+<!-- Note this webjars wokrs after adding bootstrap webjar from https://www.webjars.org/ --> 
+<link th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}"/>
+<script th:href="@{/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js}"></script>
+
+<!-- Note this jquery is curated from bootstrap webjar -->
+<script src="/webjars/jquery/1.11.1/jquery.min.js"></script>
+
+</head>
+<body>
+	<!-- Thymeleaf will replace "index Page" text with "hello"-->
+	<h1 th:text="hello">Index Page</h1>	
+</body>
+</html>
